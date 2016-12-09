@@ -202,9 +202,9 @@ function extractPos(pos) {
   };
 }
 
-function getComputedWidth(element): number {
+function getComputedWidth(element: HTMLElement): number {
   if ((element: any).currentStyle) {
     return (element: any).currentStyle.width;
   }
-  return Math.ceil(getComputedStyle(element).width);
+  return Math.ceil(parseFloat(getComputedStyle(element).width));
 }
